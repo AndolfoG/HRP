@@ -128,10 +128,10 @@ An InterProScan example command using the data extracted from 6 on the base of 8
 
 
 ###### 10. Comparison and visual inspection of NB-LRR genes predicted by HRP using data from 8.1 and 9.1
-The candidate R loci identified from HRP could be exported in GFF format and imported into the IGV genome browser and compared
+The candidate R loci identified from HRP could be exported in GFF format and imported into the IGV genome browser for comparison and visual inspection
 
 
 ## C. Bash script
-IPS2FPGs, The aim of this script is to feed it InterProScan results and return the full-length and partial NB-LRR genes classification on the base of R protein domains. Users can download and use the IPS2FPGs freely for research purpose only with acknowledgment to us and quoting HRP paper as reference. 
+IPS2FPGs, The aim of this script is to feed it InterProScan results and return the full-length and partial NB-LRR genes classification on the base of R protein domains. Users can download and use the IPS2FPGs freely for research purpose only with acknowledgment to us and quoting HRP paper as reference
 
 	
