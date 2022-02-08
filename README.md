@@ -85,7 +85,7 @@ An InterProScan example command using sequences from 1, filtered on the base of 
 IPS2fpGs.sh command example using data from 2 and 5
 			
 			
-			IPS2FPGs RefBeet-1-2_proteins.tsv -o output_file.tsv
+	IPS2FPGs RefBeet-1-2_proteins.tsv -o output_file.tsv
 
 
 ###### 7. de novo prediction of NB-LRR genes
@@ -132,8 +132,6 @@ The candidate R loci identified from HRP could be exported in GFF format and imp
 
 
 ## C. Bash script
-
-	IPS2FPGs, The aim of this script is to feed it InterProScan results and return the full-length and partial NB-LRR genes classification on the base of R protein domains.
-		Users can download and use the IPS2FPGs freely for research purpose only with acknowledgment to us and quoting HRP paper as reference. 
+IPS2FPGs, The aim of this script is to feed it InterProScan results and return the full-length and partial NB-LRR genes classification on the base of R protein domains. Users can download and use the IPS2FPGs freely for research purpose only with acknowledgment to us and quoting HRP paper as reference. 
 
 	
