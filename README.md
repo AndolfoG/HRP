@@ -8,13 +8,13 @@ We sincerely wish our method can significantly benefit your R-gene study, and en
 
 
 ## Table of Contents to use HRP
-###### A. Essential software
+- [A. Essential software] (#software)
 ###### B. Example commands
 ###### C. IPS2fpGs.sh script
 
 
 
-## A. Essential software
+## <a name="software"></a/A. Essential software
 Make sure below programs are correctly installed according to their installation manual.
 
 - InterProScan, a HMM based domain identification package (Jones *et al*., 2014)
