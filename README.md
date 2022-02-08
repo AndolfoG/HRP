@@ -7,13 +7,13 @@ This project aims to develop an informatics pipeline for genome-wide resistance 
 We sincerely wish our method can significantly benefit your R-gene study, and enjoy high-performances.
 
 
-=== Table of Contents to use HRP ===
-	A. Essential software
-	B. Example commands
-	C. IPS2FPGs script
+# Table of Contents to use HRP
+A. Essential software
+B. Example commands
+C. IPS2FPGs script
 
 
-=== A. Essential software ===
+# A. Essential software
 Make sure below programs are correctly installed according to their installation manual.
 	
 	- InterProScan, a HMM based domain identification package (Jones et al., 2014)
