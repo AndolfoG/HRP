@@ -37,12 +37,14 @@ Please follow the example commands for execution instruction of HRP method
 	Download the genome sequence and the protein sequences (encoded by gene set) of interest, for example related to the sugar beet genome assembly RefBeet-1.2
 			
 			
+			
 			[wget -O RefBeet-1-2_proteins.fasta https://bvseq.boku.ac.at/Genome/Download/RefBeet-1.2/BeetSet-2.genes.1408.pep]
 			[wget -O RefBeet-1-2_genome.fasta https://bvseq.boku.ac.at/Genome/Download/RefBeet-1.2/RefBeet-1.2.fna.gz]
 
 
 ###### 2. Identification of NB domain using a protein domain search (PDS)
 	An InterProScan example command using the data from 1
+			
 			
 			
 			[interproscan -f TSV -app Pfam -i RefBeet-1-2_proteins.fasta -b RefBeet-1-2_proteins]	
