@@ -30,7 +30,7 @@ Make sure below programs are correctly installed according to their installation
 	- IGV, interactive tool for the visual exploration of genomic data (Thorvaldsdóttir et al., 2013)
 
 	
-###### B. Example commands
+## B. Example commands
 Please follow the example commands for execution instruction of HRP method
 
 	1. Data preparation
