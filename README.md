@@ -133,7 +133,7 @@ The candidate R loci identified from HRP could be exported in GFF format and imp
 
 
 ## <a name="script"></a>Bash script
-### <a name="bscript"></a>IPS2fpGs.sh,
+### <a name="b-script"></a>IPS2fpGs.sh,
 The aim of this script is to feed it InterProScan results and return the full-length and partial NB-LRR genes classification on the base of R protein domains. Users can download and use the IPS2FPGs freely for research purpose only with acknowledgment to us and quoting HRP paper as reference
 
 	
