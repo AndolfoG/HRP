@@ -8,7 +8,7 @@ We sincerely wish our method can significantly benefit your R-gene study, and en
 
 
 ## Table of Contents to use HRP
-- [Essential software] (#software)
+- [Essential software](#software)
 ###### B. Example commands
 ###### C. IPS2fpGs.sh script
 
