@@ -10,6 +10,16 @@ We sincerely wish our method can significantly benefit your R-gene study, and en
 ## Table of Contents to use HRP
 - [Essential software](#software)
 - [Example commands](#commands)
+	- [1. Data preparation](#1)
+	- [2. Identification of NB domain using a protein domain search (PDS)](#2)
+	- [3. Decomposition into motifs of NB Pfam domains](#3)
+	- [4. Identification of additional NB Pfam domain using NB motif search](#4)
+	- [5. Identification of LRR domain using a protein domain search (PDS)](#5)
+	- [6. Classification in full-length or partial NB-LRR genes](#6)
+	- [7. *de novo* prediction of NB-LRR genes](#7)
+	- [8. Selection of non-redundant NB-LRR genes](#8)
+	- [9. Annotation of NB-LRR proteins](#9)
+	- [10. Comparison and visual inspection of NB-LRR genes predicted by HRP](#10) 
 - [Bash script](#script)
 	- [IPS2fpGs.sh](#b-script)
 
