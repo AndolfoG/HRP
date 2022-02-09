@@ -60,19 +60,19 @@ An InterProScan example command using the data from 1
 
 
 ###### <a name="3"></a>3. Decomposition into motifs of NB Pfam domains
-####### 3.1. BED file formatting of NB Pfam domains using the data from 2
+###### 3.1. BED file formatting of NB Pfam domains using the data from 2
 
 
 	grep NB-ARC RefBeet-1-2_proteins.tsv | cut -f1,7,8 > NB.bed
 
 
-####### 3.2. Extraction of NB Pfam domain sequences using the data from 1 and 3.1
+###### 3.2. Extraction of NB Pfam domain sequences using the data from 1 and 3.1
 			
 		
 	bedtools getfasta -fi RefBeet-1-2_proteins.fasta -bed NB.bed -fo NB_Pfam_Domain_Sequences.fasta
 
 
-####### 3.3. A MEME example command using data from 3.2
+###### 3.3. A MEME example command using data from 3.2
 			
 			
 	meme NB_Pfam_Domain_Sequences.fasta -protein -o meme_out -protein -mod zoops -motifs 19 -minw 4 -maxw 7 -objfun classic -markov_order 0
@@ -107,25 +107,25 @@ A genBlastG example command using data from 6
 
 
 ###### <a name="8"></a>8. Selection of non-redundant NB-LRR genes
-####### 8.1. Filtering of NB-LRR gene models longer than 20 kbp using the data from 7
+###### 8.1. Filtering of NB-LRR gene models longer than 20 kbp using the data from 7
 
 	
 	agat_sp_filter_gene_by_length.pl --gff genblastG-output.gff --size 20000 --test "<" -o genblastG-output_FbL.gff
 			
 
-####### 8.2. Identification of overlapped gene models using the data from 8.1
+###### 8.2. Identification of overlapped gene models using the data from 8.1
 
 
 	grep transcript genblastG-output_FbL.gff | gff2bed | sortBed | clusterBed -s | cut -f4,11  > genblastG-output_FbL_clusters
 
 
-####### 8.3. Estimation of putative NB-LRR protein sequences using the data from 7
+###### 8.3. Estimation of putative NB-LRR protein sequences using the data from 7
 	
 	
 	awk 'BEGIN{FS="[> ]"} /^>/{val=$2;next}  {print val,length($0);val=""} END{if(val!=""){print val}}' genblastG-output.pro | tr ' ' \\t > genblastG-output_FbL_length
 
 
-####### 8.4.  List of non-redundant NB-LRR gene models using the data from 8.2 and 8.3
+###### 8.4.  List of non-redundant NB-LRR gene models using the data from 8.2 and 8.3
 	
 	
 	join -t $'\t' -1 1 -2 1 -o 1.1,1.2,2.2 <( sort -bk1 genblastG-output_FbL_clusters) <(sort -bk1 genblastG-output_FbL_length) | sort -bk2,2 -bk3,3 -nr | sort -uk1,1 | cut -f1 > R-gene_ID_list
