@@ -44,7 +44,7 @@ Make sure below programs are correctly installed according to their installation
 ## <a name="commands"></a>Example commands
 Please follow the example commands for execution instruction of HRP method
 
-###### 1. Data preparation
+###### <a name="1"></a>1. Data preparation
 Download the genome sequence and the protein sequences (encoded by gene set) of interest, for example related to the sugar beet genome assembly RefBeet-1.2
 			
 			
@@ -52,14 +52,14 @@ Download the genome sequence and the protein sequences (encoded by gene set) of 
 	wget -O RefBeet-1-2_genome.fasta https://bvseq.boku.ac.at/Genome/Download/RefBeet-1.2/RefBeet-1.2.fna.gz
 
 
-###### 2. Identification of NB domain using a protein domain search (PDS)
+###### <a name="2"></a>2. Identification of NB domain using a protein domain search (PDS)
 An InterProScan example command using the data from 1
 			
 			
 	interproscan -f TSV -app Pfam -i RefBeet-1-2_proteins.fasta -b RefBeet-1-2_proteins	
 
 
-###### 3. Decomposition into motifs of NB Pfam domains
+###### <a name="3"></a>3. Decomposition into motifs of NB Pfam domains
 ###### 3.1. BED file formatting of NB Pfam domains using the data from 2
 
 
@@ -78,35 +78,35 @@ An InterProScan example command using the data from 1
 	meme NB_Pfam_Domain_Sequences.fasta -protein -o meme_out -protein -mod zoops -motifs 19 -minw 4 -maxw 7 -objfun classic -markov_order 0
 
 
-###### 4. Identification of additional NB Pfam domain using motif search
+###### <a name="4"></a>4. Identification of additional NB Pfam domain using motif search
 A MAST example command using data from 1 and 3.3
 			
 			
 	mast -o mast_out meme_out.txt RefBeet-1-2_proteins.fasta
 
 	
-###### 5. Identification of LRR domain using a protein domain search (PDS)
+###### <a name="5"></a>5. Identification of LRR domain using a protein domain search (PDS)
 An InterProScan example command using sequences from 1, filtered on the base of gene-ID list from 2 and 4
 			
 			
 	interproscan -f TSV -app SUPERFAMILY -i RefBeet-1-2_proteins_subset.fasta -b RefBeet-1-2_proteins	
 	
 
-###### 6. Classification in full-length or partial NB-LRR genes
+###### <a name="6"></a>6. Classification in full-length or partial NB-LRR genes
 IPS2fpGs.sh command example using data from 2 and 5
 			
 			
 	IPS2FPGs RefBeet-1-2_proteins.tsv -o output_file.tsv
 
 
-###### 7. de novo prediction of NB-LRR genes
+###### <a name="7"></a>7. de novo prediction of NB-LRR genes
 A genBlastG example command using data from 6
 			
 			
 	genblastG -q Full-length_NB-LRRs.fasta -t RefBeet-1-2_genome.fasta -gff -cdna -pro -o genblastG-output
 
 
-###### 8. Selection of non-redundant NB-LRR genes
+###### <a name="8"></a>8. Selection of non-redundant NB-LRR genes
 ###### 8.1. Filtering of NB-LRR gene models longer than 20 kbp using the data from 7
 
 	
@@ -131,14 +131,14 @@ A genBlastG example command using data from 6
 	join -t $'\t' -1 1 -2 1 -o 1.1,1.2,2.2 <( sort -bk1 genblastG-output_FbL_clusters) <(sort -bk1 genblastG-output_FbL_length) | sort -bk2,2 -bk3,3 -nr | sort -uk1,1 | cut -f1 > R-gene_ID_list
 
 
-###### 9. Annotation of NB-LRR proteins
+###### <a name="9"></a>9. Annotation of NB-LRR proteins
 An InterProScan example command using the data extracted from 6 on the base of 8.4
 	
 	
 	interproscan -f TSV,GFF3 -i NB-LRR_gene_candidates.fasta -b RefBeet-1-2_B-LRR_gene_candidates
 
 
-###### 10. Comparison and visual inspection of NB-LRR genes predicted by HRP using data from 8.1 and 9.1
+###### <a name="10"></a>10. Comparison and visual inspection of NB-LRR genes predicted by HRP using data from 8.1 and 9.1
 The candidate R loci identified from HRP could be exported in GFF format and imported into the IGV genome browser for comparison and visual inspection
 
 
