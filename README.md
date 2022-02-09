@@ -9,8 +9,8 @@ We sincerely wish our method can significantly benefit your R-gene study, and en
 
 ## Table of Contents to use HRP
 - [Essential software](#software)
-###### B. Example commands
-###### C. IPS2fpGs.sh script
+- [Example commands](#commands)
+- [Bash script](#script)
 
 
 
@@ -30,7 +30,7 @@ Make sure below programs are correctly installed according to their installation
 - IGV, interactive tool for the visual exploration of genomic data (Thorvaldsdóttir *et al*., 2013)
 
 	
-## B. Example commands
+## <a name="commands"></a>Example commands
 Please follow the example commands for execution instruction of HRP method
 
 ###### 1. Data preparation
@@ -131,7 +131,7 @@ An InterProScan example command using the data extracted from 6 on the base of 8
 The candidate R loci identified from HRP could be exported in GFF format and imported into the IGV genome browser for comparison and visual inspection
 
 
-## C. Bash script
+## <a name="script"></a>Bash script
 IPS2fpGs.sh, The aim of this script is to feed it InterProScan results and return the full-length and partial NB-LRR genes classification on the base of R protein domains. Users can download and use the IPS2FPGs freely for research purpose only with acknowledgment to us and quoting HRP paper as reference
 
 	
