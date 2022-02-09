@@ -13,7 +13,7 @@ We sincerely wish our method can significantly benefit your R-gene study, and en
 	- [1. Data preparation](#1)
 	- [2. Identification of NB domain using a protein domain search (PDS)](#2)
 	- [3. Decomposition into motifs of NB Pfam domains](#3)
-	- [4. Identification of additional NB Pfam domain using NB motif search](#4)
+	- [4. Identification of additional NB Pfam domain using motif search](#4)
 	- [5. Identification of LRR domain using a protein domain search (PDS)](#5)
 	- [6. Classification in full-length or partial NB-LRR genes](#6)
 	- [7. *de novo* prediction of NB-LRR genes](#7)
@@ -78,7 +78,7 @@ An InterProScan example command using the data from 1
 	meme NB_Pfam_Domain_Sequences.fasta -protein -o meme_out -protein -mod zoops -motifs 19 -minw 4 -maxw 7 -objfun classic -markov_order 0
 
 
-###### 4. Identification of additional NB Pfam domain using NB motif search
+###### 4. Identification of additional NB Pfam domain using motif search
 A MAST example command using data from 1 and 3.3
 			
 			
