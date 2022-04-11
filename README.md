@@ -138,7 +138,7 @@ An InterProScan example command using the data extracted from 6 on the base of 8
 	interproscan -f TSV,GFF3 -i NB-LRR_gene_candidates.fasta -b RefBeet-1-2_B-LRR_gene_candidates
 
 
-###### <a name="10"></a>10. Comparison and visual inspection of NB-LRR genes predicted by HRP using data from 8.1 and 9.1
+###### <a name="10"></a>10. Comparison and visual inspection of NB-LRR genes predicted by HRP using data from 8.1 and 9
 The candidate R loci identified from HRP could be exported in GFF format and imported into the IGV genome browser for comparison and visual inspection
 
 
