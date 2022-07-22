@@ -119,7 +119,7 @@ A genBlastG example command using data from 6
 	grep transcript genblastG-output_FbL.gff | gff2bed | sortBed | clusterBed -s | cut -f4,11  > genblastG-output_FbL_clusters
 
 
-###### 8.3. Estimation of putative NB-LRR protein sequences using the data from 7
+###### 8.3. Estimation of NB-LRR protein sequence lengths using the data from 7
 	
 	
 	awk 'BEGIN{FS="[> ]"} /^>/{val=$2;next}  {print val,length($0);val=""} END{if(val!=""){print val}}' genblastG-output.pro | tr ' ' \\t > genblastG-output_FbL_length
