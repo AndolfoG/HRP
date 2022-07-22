@@ -128,7 +128,7 @@ A genBlastG example command using data from 6
 ###### 8.4.  List of non-redundant NB-LRR gene models using the data from 8.2 and 8.3
 	
 	
-	join -t $'\t' -1 1 -2 1 -o 1.1,1.2,2.2 <( sort -bk1 genblastG-output_FbL_clusters) <(sort -bk1 genblastG-output_FbL_length) | sort -bk2,2 -bk3,3 -nr | sort -uk1,1 | cut -f1 > R-gene_ID_list
+	join -t $'\t' -1 1 -2 1 -o 1.1,1.2,2.2 <( sort -bk1 genblastG-output_FbL_clusters) <(sort -bk1 genblastG-output_FbL_length) | sort -bk2,2 -bk3,3 -nr | sort -uk2,2 | cut -f1 > R-gene_ID_list
 
 
 ###### <a name="9"></a>9. Annotation of NB-LRR proteins
