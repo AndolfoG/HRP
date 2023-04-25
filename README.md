@@ -75,7 +75,7 @@ An InterProScan example command using the data from 1
 ###### 3.3. A MEME example command using data from 3.2
 			
 			
-	meme NB_Pfam_Domain_Sequences.fasta -protein -o meme_out -protein -mod zoops -motifs 19 -minw 4 -maxw 7 -objfun classic -markov_order 0
+	meme NB_Pfam_Domain_Sequences.fasta -protein -o meme_out -protein -mod zoops -nmotifs 19 -minw 4 -maxw 7 -objfun classic -markov_order 0
 
 
 ###### <a name="4"></a>4. Identification of additional NB Pfam domain using motif search
